@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// EXTERNAL LINKS
+// @import 'https://unpkg.com/primer/build/build.css';
+// @import "bootstrap/scss/bootstrap";
+
+// INTERNAL LINKS (PARTIALS)
+@import '../assets/stylesheets/index';
+
+// COMMON SCSS
+html,
+body {
+  margin: 0;
+  padding: 0;
+  // get rid of any chance of horizontal scroll
+  overflow-x: hidden;
+
+  background-color: $light-shade;
+
+  .font-header {
+    @include font-header;
+    color: $dark-shade;
+  }
+  .font-body {
+    @include font-body;
+    color: $dark-shade;
+  }
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+}
