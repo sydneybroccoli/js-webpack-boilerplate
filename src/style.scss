@@ -15,15 +15,15 @@ body {
   // get rid of any chance of horizontal scroll
   overflow-x: hidden;
 
-  background-color: $light-shade;
+  // background-color: $light-shade;
 
   .font-header {
-    @include font-header;
-    color: $dark-shade;
+    // @include font-header;
+    // color: $dark-shade;
   }
   .font-body {
-    @include font-body;
-    color: $dark-shade;
+    // @include font-body;
+    // color: $dark-shade;
   }
 }
 

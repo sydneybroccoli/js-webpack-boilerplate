@@ -4,13 +4,13 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const dotenv = require('dotenv-webpack');
 
+const ROOT_PATH = path.resolve(__dirname, '..');
+
 module.exports = {
-  entry: {
-    main: './src/index.js'
-  },
+  entry:  ROOT_PATH + '/src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: ROOT_PATH + '/dist',
     publicPath: '/'
   },
   module: {
@@ -20,8 +20,7 @@ module.exports = {
       // include: path.resolve(__dirname, './assets/pages'),
       use: {
         loader: 'html-loader',
-        options: {
-          interpolate: true } } },
+        options: {} } },
     // JAVASCRIPT RULES
     { test: /\.js$/,
       exclude: /(node_modules)/,  // ignore node_module JS files
@@ -61,8 +60,8 @@ module.exports = {
       filename: 'bundle.css'
     }),
     new HTMLWebpackPlugin({
-      title: 'WEBPACK BOILERPLATE',
-      template: './src/index.html',
+      title: 'WEBPACK-BOILERPLATE',
+      template: ROOT_PATH + '/src/index.html',
       filename: 'index.html',
       // favicon: "./assets/images/favicon/favicon.ico",
     }),
